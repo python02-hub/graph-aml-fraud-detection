@@ -1,5 +1,4 @@
 # 🕸️ Graph-Based AML & Fraud Network Detection
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/downloads/)
 
 A local, dependency-light pipeline that detects money-laundering rings and coordinated
