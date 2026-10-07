@@ -47,7 +47,7 @@ GNN learn those multi-hop patterns directly.
 ## Quickstart
 
 ```bash
-git clone https://github.com/USERNAME/REPO.git
+git clone https://github.com/python02-hub/graph-aml-fraud-detection.git
 cd REPO
 pip install -r requirements.txt
 
