@@ -6,7 +6,7 @@ simple.
 ## Setup
 
 ```bash
-git clone https://github.com/USERNAME/REPO.git
+git clone https://github.com/python02-hub/graph-aml-fraud-detection.git
 cd REPO
 python -m venv venv
 source venv/bin/activate   # venv\Scripts\activate on Windows
