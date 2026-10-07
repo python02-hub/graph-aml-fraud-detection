@@ -185,7 +185,3 @@ flowchart LR
 Issues and PRs are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md). The CI workflow runs
 the full pipeline on synthetic data on every push, so most regressions get caught
 automatically.
-
-## License
-
-[MIT](LICENSE)
