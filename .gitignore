@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+
+# Project outputs (generated, not source)
+runs/
+*.csv
+!docs/**/*.csv
+model.pt
+graph.html
+
+# Datasets (large, not meant to be committed)
+*HI-Small*.csv
+*HI-Large*.csv
+*LI-Small*.csv
+*LI-Large*.csv
+data/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Jupyter
+.ipynb_checkpoints/

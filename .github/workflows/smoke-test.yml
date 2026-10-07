@@ -1,0 +1,39 @@
+name: Smoke test
+
+# Runs the pipeline end-to-end on synthetic data, so a broken PR or dependency
+# bump is caught before anyone tries it on real data.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  demo-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run pipeline on synthetic data
+        run: python aml_gnn.py --demo --epochs 10 --out runs/ci --no-baseline
+
+      - name: Build the interactive graph
+        run: python visualize_graph.py --run runs/ci
+
+      - name: Check expected outputs exist
+        run: |
+          test -f runs/ci/metrics.json
+          test -f runs/ci/flagged_transactions.csv
+          test -f runs/ci/ring_candidates.csv
+          test -f runs/ci/graph.html
+          echo "All expected output files were created."
